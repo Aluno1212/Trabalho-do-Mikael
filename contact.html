@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <h1>Entre em contato</h1>
+
+    <form action="" method="">
+        <table>
+            <tr>
+                <th><label for="nome">Nome:</label></th>
+                <td><input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required></td>
+            </tr>
+            <tr>
+                <th><label for="email">Email:</label></th>
+                <td><input type="text" name="email" id="email" placeholder="Digite seu email para contato" required></td>
+            </tr>
+            <tr>
+                <th><label for="mensagem">Digite sua mensagem:</label></th>
+                <td><textarea name="mensagem" rows="5" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <button onclick="Enviar()">Enviar</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+    function Enviar() {
+        const name = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+
+        if (!name || !email) {
+         alert("Por favor, preencha todos os campos obrigatórios.");
+         event.preventDefault();
+        }
+        else{
+        alert ("Seu contato foi enviado com sucesso!");
+        }
+    }
+  </script>
+
+    <img src="images/Uninter-branco-e-amarelo.png" alt="Logo da Uninter" style="float: right; margin-right: 10px; margin-top: 149px; width: 50%; height: 50%;">
+
+    <button onclick="history.back()">Voltar</button>
+
+</body>
+</html>
